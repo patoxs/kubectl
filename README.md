@@ -23,7 +23,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       with:
-        args: set image --record deployment.apps/my-app php=${{ steps.build-image.outputs.IMAGE }} -n ${{ secrets.NAMESPACE }}
+        args: set image --record deployment.apps/my-app app=${{ steps.build-image.outputs.IMAGE }} -n ${{ secrets.NAMESPACE }}
     - name: verify deployment
       uses: patoxs/kubectl@main
       env:
