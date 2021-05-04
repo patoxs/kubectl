@@ -1,0 +1,9 @@
+name: kubectl-eks
+description: "'kubectl' for eks"
+author: 'patoxs'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'box'
+  color: 'orange'
